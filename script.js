@@ -19,8 +19,9 @@ function generatePassword() {
   if (passwordLowercase === false && passwordUppercase === false && passwordNumbers === false && passwordSpecial === false) {
     alert("Please choose at least one character type.");
     return generatePassword();
-  // Generates password based on user input
   }
+
+  // Generates password based on user input
   if (passwordLowercase === true && passwordUppercase === true && passwordNumbers === true && passwordSpecial === true) {
     charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
     var password = "";
