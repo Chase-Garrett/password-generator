@@ -17,7 +17,7 @@ The remaining prompts allow the user to select either "OK" for yes or "Cancel" f
 * numbers
 * special characters
 
-**NOTE: Making a selection for a type of character does not guarantee that any characters of that type will make it into the password, it only means that they may show up in the generated password.**
+**NOTE: If the password generator fails to match the entered criteria the user will be made to answer the prompts again.**
 
 ## Credits
 N/A
