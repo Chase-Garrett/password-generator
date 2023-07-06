@@ -32,6 +32,7 @@ function generatePassword() {
     if (password.match(/[a-z]/g) && password.match(/[A-Z]/g) && password.match(/[0-9]/g) && password.match(/[^\w\s]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   } else if (passwordLowercase === true && passwordUppercase === true && passwordNumbers === true && passwordSpecial === false) {
@@ -44,6 +45,7 @@ function generatePassword() {
     if (password.match(/[a-z]/g) && password.match(/[A-Z]/g) && password.match(/[0-9]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   } else if (passwordLowercase === true && passwordUppercase === true && passwordNumbers === false && passwordSpecial === false) {
@@ -56,6 +58,7 @@ function generatePassword() {
     if (password.match(/[a-z]/g) && password.match(/[A-Z]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   } else if (passwordLowercase === true && passwordUppercase === false && passwordNumbers === false && passwordSpecial === false) {
@@ -68,6 +71,7 @@ function generatePassword() {
     if (password.match(/[a-z]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   } else if (passwordLowercase === false && passwordUppercase === true && passwordNumbers === true && passwordSpecial === true) {
@@ -80,6 +84,7 @@ function generatePassword() {
     if (password.match(/[A-Z]/g) && password.match(/[0-9]/g) && password.match(/[^\w\s]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   } else if (passwordLowercase === false && passwordUppercase === true && passwordNumbers === true && passwordSpecial === false) {
@@ -92,6 +97,7 @@ function generatePassword() {
     if (password.match(/[A-Z]/g) && password.match(/[0-9]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   } else if (passwordLowercase === false && passwordUppercase === true && passwordNumbers === false && passwordSpecial === false) {
@@ -104,6 +110,7 @@ function generatePassword() {
     if (password.match(/[A-Z]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   } else if (passwordLowercase === false && passwordUppercase === false && passwordNumbers === true && passwordSpecial === true) {
@@ -116,6 +123,7 @@ function generatePassword() {
     if (password.match(/[0-9]/g) && password.match(/[^\w\s]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   } else if (passwordLowercase === false && passwordUppercase === false && passwordNumbers === true && passwordSpecial === false) {
@@ -128,6 +136,7 @@ function generatePassword() {
     if (password.match(/[0-9]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   } else if (passwordLowercase === false && passwordUppercase === false && passwordNumbers === false && passwordSpecial === true) {
@@ -140,6 +149,7 @@ function generatePassword() {
     if (password.match(/[^\w\s]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   } else if (passwordLowercase === true && passwordUppercase === false && passwordNumbers === true && passwordSpecial === true) {
@@ -152,6 +162,7 @@ function generatePassword() {
     if (password.match(/[a-z]/g) && password.match(/[0-9]/g) && password.match(/[^\w\s]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   } else if (passwordLowercase === true && passwordUppercase === false && passwordNumbers === true && passwordSpecial === false) {
@@ -171,6 +182,7 @@ function generatePassword() {
     if (password.match(/[a-z]/g) && password.match(/[^\w\s]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   } else if (passwordLowercase === false && passwordUppercase === true && passwordNumbers === false && passwordSpecial === true) {
@@ -183,6 +195,7 @@ function generatePassword() {
     if (password.match(/[A-Z]/g) && password.match(/[^\w\s]/g)) {
       return password;
     } else {
+      alert("Password does not meet criteria. Please try again.");
       return generatePassword();
     }
   }
