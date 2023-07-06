@@ -23,103 +23,168 @@ function generatePassword() {
 
   // Generates password based on user input
   if (passwordLowercase === true && passwordUppercase === true && passwordNumbers === true && passwordSpecial === true) {
-    charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+    var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password += charset.charAt(Math.floor(Math.random() * n));
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[a-z]/g) && password.match(/[A-Z]/g) && password.match(/[0-9]/g) && password.match(/[^\w\s]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   } else if (passwordLowercase === true && passwordUppercase === true && passwordNumbers === true && passwordSpecial === false) {
-    charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password += charset.charAt(Math.floor(Math.random() * n));
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[a-z]/g) && password.match(/[A-Z]/g) && password.match(/[0-9]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   } else if (passwordLowercase === true && passwordUppercase === true && passwordNumbers === false && passwordSpecial === false) {
-    charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password += charset.charAt(Math.floor(Math.random() * n));
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[a-z]/g) && password.match(/[A-Z]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   } else if (passwordLowercase === true && passwordUppercase === false && passwordNumbers === false && passwordSpecial === false) {
-    charset = "abcdefghijklmnopqrstuvwxyz";
+    var charset = "abcdefghijklmnopqrstuvwxyz";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password += charset.charAt(Math.floor(Math.random() * n));
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[a-z]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   } else if (passwordLowercase === false && passwordUppercase === true && passwordNumbers === true && passwordSpecial === true) {
-    charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+    var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password += charset.charAt(Math.floor(Math.random() * n));
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[A-Z]/g) && password.match(/[0-9]/g) && password.match(/[^\w\s]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   } else if (passwordLowercase === false && passwordUppercase === true && passwordNumbers === true && passwordSpecial === false) {
-    charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password += charset.charAt(Math.floor(Math.random() * n));
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[A-Z]/g) && password.match(/[0-9]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   } else if (passwordLowercase === false && passwordUppercase === true && passwordNumbers === false && passwordSpecial === false) {
-    charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password += charset.charAt(Math.floor(Math.random() * n));
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[A-Z]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   } else if (passwordLowercase === false && passwordUppercase === false && passwordNumbers === true && passwordSpecial === true) {
-    charset = "0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+    var charset = "0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password += charset.charAt(Math.floor(Math.random() * n));
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[0-9]/g) && password.match(/[^\w\s]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   } else if (passwordLowercase === false && passwordUppercase === false && passwordNumbers === true && passwordSpecial === false) {
-    charset = "0123456789";
+    var charset = "0123456789";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password += charset.charAt(Math.floor(Math.random() * n)); 
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[0-9]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   } else if (passwordLowercase === false && passwordUppercase === false && passwordNumbers === false && passwordSpecial === true) {
-    charset = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+    var charset = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password += charset.charAt(Math.floor(Math.random()* n));
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[^\w\s]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   } else if (passwordLowercase === true && passwordUppercase === false && passwordNumbers === true && passwordSpecial === true) {
-    charset = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+    var charset = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password += charset.charAt(Math.floor(Math.random()* n));
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[a-z]/g) && password.match(/[0-9]/g) && password.match(/[^\w\s]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   } else if (passwordLowercase === true && passwordUppercase === false && passwordNumbers === true && passwordSpecial === false) {
-    charset = "abcdefghijklmnopqrstuvwxyz0123456789";
+    var charset = "abcdefghijklmnopqrstuvwxyz0123456789";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password +=charset.charAt(Math.floor(Math.random()* n));
     }
     return password;
   } else if (passwordLowercase === true && passwordUppercase === false && passwordNumbers === false && passwordSpecial === true) {
-    charset = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+~`|}{[]:;?><,./-=";
+    var charset = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+~`|}{[]:;?><,./-=";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password +=charset.charAt(Math.floor(Math.random()* n));
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[a-z]/g) && password.match(/[^\w\s]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   } else if (passwordLowercase === false && passwordUppercase === true && passwordNumbers === false && passwordSpecial === true) {
-    charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+~`|}{[]:;?><,./-=";
+    var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+~`|}{[]:;?><,./-=";
     var password = "";
     for (var i = 0, n = charset.length; i < passwordLength; ++i) {
       password +=charset.charAt(Math.floor(Math.random()* n));
     }
-    return password;
+    // Checks to make sure password meets criteria
+    if (password.match(/[A-Z]/g) && password.match(/[^\w\s]/g)) {
+      return password;
+    } else {
+      return generatePassword();
+    }
   }
 }
 
